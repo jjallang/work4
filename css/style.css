@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  height: 2000px; }
+
+.inner {
+  width: 1180px;
+  position: relative;
+  margin: 0 auto; }
+
+header#header {
+  border-top: 10px solid orange;
+  box-sizing: border-box;
+  height: 160px; }
+  header#header .top {
+    margin-top: 20px;
+    height: 100px; }
+    header#header .top > h1 {
+      font: bold 40px/1 "arial";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    header#header .top::after {
+      content: "";
+      display: block;
+      clear: both; }
+    header#header .top > .left {
+      float: left; }
+      header#header .top > .left::after {
+        content: "";
+        display: block;
+        clear: both; }
+      header#header .top > .left > div {
+        float: left;
+        margin-right: 10px;
+        font: normal 14px/1 "arial"; }
+        header#header .top > .left > div > i {
+          margin-right: 5px; }
+    header#header .top > .right {
+      float: right; }
+      header#header .top > .right::after {
+        content: "";
+        display: block;
+        clear: both; }
+      header#header .top > .right > div {
+        float: left;
+        margin-left: 10px;
+        font: normal 14px/1 "arial"; }
+        header#header .top > .right > div > i {
+          margin-right: 5px; }
+  header#header nav {
+    width: 570px;
+    position: relative;
+    margin: 0 auto; }
+    header#header nav > ul::after {
+      content: "";
+      display: block;
+      clear: both; }
+    header#header nav > ul > li {
+      float: left;
+      margin-right: 30px;
+      font: bold 14px/1 "arial"; }
+      header#header nav > ul > li:last-child {
+        margin-right: 0; }
+
+section#visual {
+  background: url("../img/carl-jorgensen-leyUrzdwurc-unsplash.jpg") no-repeat center/cover;
+  width: 100%;
+  height: calc(100vh - 160px);
+  position: relative; }
+  section#visual .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    section#visual .wrap .txt {
+      width: 1010px;
+      position: absolute;
+      top: 50%;
+      left: -200px;
+      right: 0;
+      margin: -120px auto; }
+      section#visual .wrap .txt::after {
+        content: "";
+        display: block;
+        clear: both; }
+      section#visual .wrap .txt > h1 {
+        float: left;
+        font: bold 110px/1 "arial";
+        color: #fff;
+        width: 510px;
+        height: 220px; }
+      section#visual .wrap .txt > p {
+        width: 300px;
+        height: 220px;
+        margin-left: 200px;
+        float: left;
+        font: bold 20px/1.3 "arial";
+        color: #fff;
+        letter-spacing: 1px;
+        opacity: .6; }
+        section#visual .wrap .txt > p > span {
+          display: inline-block;
+          font: bold 50px/1 "arial";
+          color: #fff;
+          margin-bottom: 30px; }
+
+section#about {
+  padding: 100px;
+  box-sizing: border-box; }
+  section#about::after {
+    content: "";
+    display: block;
+    clear: both; }
+  section#about .pic {
+    float: left;
+    position: relative;
+    width: 400px;
+    height: 400px; }
+    section#about .pic > img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover; }
+    section#about .pic .square {
+      position: absolute;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: -300px;
+      margin: auto;
+      background-color: #99e7ff;
+      width: 220px;
+      height: 220px; }
+      section#about .pic .square > h1 {
+        font: bold 50px/1 "arial";
+        color: #fff;
+        letter-spacing: -2px; }
+      section#about .pic .square > h2 {
+        font: normal 14px/1 "arial";
+        color: #fff;
+        letter-spacing: 1px; }
+  section#about .txt {
+    float: left;
+    width: calc(1180px - 100px - 400px);
+    height: 400px;
+    margin-left: 100px; }
+    section#about .txt::after {
+      content: "";
+      display: block;
+      clear: both; }
+    section#about .txt > h1 {
+      font: normal 24px/1 "arial";
+      color: lightseagreen; }
+    section#about .txt > h2 {
+      margin-top: 30px;
+      font: bold 50px/1 "arial";
+      color: #777; }
+    section#about .txt > div {
+      margin-top: 30px; }
+      section#about .txt > div::after {
+        content: "";
+        display: block;
+        clear: both; }
+      section#about .txt > div > p {
+        float: left;
+        width: calc( (100% - 20px) / 2 );
+        font: normal 16px/1 "arial";
+        color: #777;
+        margin-right: 10px; }
+        section#about .txt > div > p:last-child {
+          margin-right: 0; }
+        section#about .txt > div > p:nth-of-type(n+3):nth-of-type(-n+4) {
+          margin-top: 20px; }
+
+section#teachers .wrap {
+  width: 2400px; }
+  section#teachers .wrap::after {
+    content: "";
+    display: block;
+    clear: both; }
+  section#teachers .wrap > .pic {
+    float: left;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    box-sizing: border-box; }
+    section#teachers .wrap > .pic > img {
+      width: calc( 400px - 20px );
+      height: calc( 400px - 20px );
+      object-fit: cover; }
+  section#teachers .wrap > .teacher {
+    float: left;
+    background-color: #fff;
+    width: 800px;
+    height: 400px;
+    position: relative; }
+    section#teachers .wrap > .teacher:nth-of-type(2) > .frame > .intro {
+      background-color: #b482ee; }
+    section#teachers .wrap > .teacher:nth-of-type(4) > .frame > .intro {
+      background-color: olivedrab; }
+    section#teachers .wrap > .teacher:nth-of-type(1) > .frame > .intro {
+      background-color: goldenrod; }
+    section#teachers .wrap > .teacher > .frame {
+      padding: 10px;
+      box-sizing: border-box;
+      width: inherit;
+      height: inherit; }
+      section#teachers .wrap > .teacher > .frame::after {
+        content: "";
+        display: block;
+        clear: both; }
+      section#teachers .wrap > .teacher > .frame > .intro {
+        float: left;
+        width: calc( (800px - 20px) / 2 );
+        height: calc( 400px - 20px );
+        padding: 80px 40px;
+        box-sizing: border-box; }
+        section#teachers .wrap > .teacher > .frame > .intro > h1 {
+          font: bold 12px/1.5 "arial";
+          color: #fff;
+          letter-spacing: 1px; }
+        section#teachers .wrap > .teacher > .frame > .intro > h2 {
+          margin-top: 20px;
+          font: bold 36px/1.5 "arial";
+          color: #fff;
+          letter-spacing: 1px; }
+        section#teachers .wrap > .teacher > .frame > .intro > p {
+          margin-top: 30px;
+          font: normal 16px/1.5 "arial";
+          color: #fff; }
+      section#teachers .wrap > .teacher > .frame > .pic {
+        float: left;
+        width: calc( (800px - 20px) / 2 );
+        height: calc( 400px - 20px ); }
+        section#teachers .wrap > .teacher > .frame > .pic > img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover; }
+
+/*# sourceMappingURL=style.css.map */

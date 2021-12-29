@@ -1,0 +1,290 @@
+@charset 'utf-8';
+
+@import 'reset.scss';
+
+body {
+    height: 2000px;
+}
+
+.inner {
+    width: 1180px;
+    position: relative;
+    margin: 0 auto;
+}
+
+header#header {
+    border-top: 10px solid orange; box-sizing: border-box;
+    height: 160px;
+    .top {
+        margin-top: 20px;
+        height: 100px;
+
+        >h1 {
+            font: bold 40px/1 "arial";
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        >.left {
+            float: left;
+
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            >div {
+                float: left;
+                margin-right: 10px;
+                font: normal 14px/1 "arial";
+                >i {
+                    margin-right: 5px;
+                }
+            }
+        }
+        >.right {
+            float: right;
+
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            >div {
+                float:left;
+                margin-left: 10px;
+                font: normal 14px/1 "arial";
+                >i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    nav {
+        width: 570px;
+        position: relative;
+        margin: 0 auto;
+        >ul {
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            >li {
+                float: left;
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                font: bold 14px/1 "arial";
+            }
+        }
+    }
+}
+section#visual {
+    background: url("../img/carl-jorgensen-leyUrzdwurc-unsplash.jpg") no-repeat center/cover;
+    width: 100%; height: calc(100vh - 160px);
+    position: relative;
+
+    .wrap {
+        position: relative;
+        width: 100%; height: 100%;
+
+        .txt {
+            width: 1010px;
+            position: absolute; 
+            top: 50%; left: -200px; right: 0;
+            margin: -120px auto;       
+
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            >h1 {
+                float: left;
+                font: bold 110px/1 "arial"; color: #fff;
+                width: 510px; height: 220px;
+            }
+            >p {
+                width: 300px; height: 220px;
+                >span {
+                    display: inline-block;
+                    font: bold 50px/1 "arial"; color: #fff;
+                    margin-bottom: 30px;
+                }
+                margin-left: 200px; 
+                float: left;
+                font: bold 20px/1.3 "arial"; color: #fff; 
+                letter-spacing: 1px;    
+                opacity: .6;   
+            }
+        }
+    }
+}
+section#about {
+    padding: 100px; box-sizing: border-box;
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }    
+    .pic {
+        float: left;
+        position: relative;
+        width: 400px; height: 400px;
+        >img {
+            width: inherit; height: inherit;
+            object-fit: cover;
+        }
+        .square {
+            position: absolute; 
+            top: 50px; bottom: 0; left: 0; right: -300px;
+            margin: auto;
+
+            background-color: rgb(153, 231, 255);
+            width: 220px; height: 220px;
+            >h1 {
+                font: bold 50px/1 "arial"; color: #fff;
+                letter-spacing: -2px;
+            }
+            >h2 {
+                font: normal 14px/1 "arial"; color: #fff;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .txt {
+        float: left;
+        width: calc(1180px - 100px - 400px); height: 400px;
+        margin-left: 100px;
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        } 
+        >h1 {
+            font: normal 24px/1 "arial"; color: lightseagreen;
+        }
+        >h2 {
+            margin-top: 30px;
+            font: bold 50px/1 "arial"; color: #777;
+        }
+        >div {
+            margin-top: 30px;
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            } 
+            >p {
+                float: left;
+                width: calc( (100% - 20px) / 2 );
+                font: normal 16px/1 "arial"; color: #777;
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:nth-of-type(n+3):nth-of-type(-n+4) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+section#teachers {
+    .wrap {
+        width: 2400px;
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        >.pic {
+            float: left;
+            background-color: #fff;
+            width: 400px; height: 400px;
+            padding: 10px; box-sizing: border-box;
+            >img {
+                width: calc( 400px - 20px ); 
+                height: calc( 400px - 20px );
+                object-fit: cover;
+            }
+        }
+        >.teacher {
+            float: left;
+            background-color: #fff;
+            width: 800px; height: 400px;
+            position: relative;
+            &:nth-of-type(2){
+                >.frame {
+                    >.intro {
+                        background-color: rgb(180, 130, 238);
+                    }
+                }
+            }
+            &:nth-of-type(4){
+                >.frame {
+                    >.intro {
+                        background-color: olivedrab;
+                    }
+                }
+            }
+            &:nth-of-type(1){
+                >.frame {
+                    >.intro {
+                        background-color: goldenrod;
+                    }
+                }
+            }
+
+            >.frame {
+                padding: 10px; box-sizing: border-box;
+
+                // position: absolute; 
+                // left: 0; right: 0; top: 0; bottom: 0;
+                // margin: auto;
+                width: inherit; height: inherit;
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                >.intro {
+                    float: left;
+                    width: calc( (800px - 20px) / 2 ); 
+                    height: calc( 400px - 20px );
+                    padding: 80px 40px; box-sizing: border-box;
+                    >h1 {
+                        font: bold 12px/1.5 "arial"; color: #fff; letter-spacing: 1px;
+                    }
+                    >h2 {
+                        margin-top: 20px;
+                        font: bold 36px/1.5 "arial"; color: #fff; letter-spacing: 1px;
+                    }
+                    >p {
+                        margin-top: 30px;
+                        font: normal 16px/1.5 "arial"; color: #fff;
+                    }
+                }
+                >.pic {
+                    float: left;
+                    width: calc( (800px - 20px) / 2 ); 
+                    height: calc( 400px - 20px );
+                    >img {
+                        width: inherit; height: inherit;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
